@@ -1,1 +1,1 @@
-# random_world_cup_stuff
+The purpose of this repository is mostly for me to mess around with some world cup data that I was able to capture from Kaggle. The link from Kaggle is https://www.kaggle.com/datasets/evangower/fifa-world-cup?resource=download&select=matches.csv. I enjoy messing around and building data visualizations by using various Python libraries.
