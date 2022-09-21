@@ -34,4 +34,5 @@ print(countries_defeated)
 # confederation breakdown of countries defeated 
 
 confeds = ["Concacaf", "Comnebol", "Uefa", "CAF", "Asian Confederation", "Oceania"]
+print("here")
 
