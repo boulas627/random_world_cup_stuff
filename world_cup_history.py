@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import sys
+import matplotlib as plt
 
 df = pd.read_csv("matches.csv")
 
@@ -35,4 +36,7 @@ print(countries_defeated)
 
 confeds = ["Concacaf", "Comnebol", "Uefa", "CAF", "Asian Confederation", "Oceania"]
 print("here")
+
+
+
 
