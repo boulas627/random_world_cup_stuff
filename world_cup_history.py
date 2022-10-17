@@ -3,6 +3,26 @@ import numpy as np
 import sys
 import matplotlib as plt
 
+
+def world_cup_victories(country_name, world_cup_df):
+	countries_defeated = [] 
+	
+	for i in range(len(world_cup_df["winning_team"])): 
+		if world_cup_df["winning_team"][i] == country_name: 
+			countries_defeated.append(world_cup_df["losing_team"][i])
+
+	return countries_defeated
+
+def world_cup_losses(country_name, world_cup_df):
+
+	countries_lost_to = []
+
+	for i in range(len(world_cup_df["losing_team"])): 
+		if world_cup_df["losing_team"][i] == country_name: 
+			countries_lost_to.append(world_cup_df["winning_team"][i])
+
+	return countries_lost_to
+
 df = pd.read_csv("matches.csv")
 
 df = pd.DataFrame(df)
@@ -29,13 +49,17 @@ for i in range(len(df["winning_team"])):
 
 
 
-print(countries_defeated)
+print(world_cup_losses("Senegal", df))
+
+sys.exit()
 
 
-# confederation breakdown of countries defeated 
-
-confeds = ["Concacaf", "Comnebol", "Uefa", "CAF", "Asian Confederation", "Oceania"]
-print("here")
+match_results = ["Win", "Loss", "Draw"]
+ 
+for row in df.iterrows(): 
+	print(row)
+	# if row["home_team"] == "United States" or row["away_team"] == "United States": 
+	# 	print("I")
 
 
 
