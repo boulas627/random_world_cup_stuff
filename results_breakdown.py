@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import sys
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
 
 def world_cup_victories_sum(country_name, world_cup_df):
@@ -59,8 +59,22 @@ df_results['Wins'] = wins
 df_results['Draws'] = draws
 df_results['Losses'] = losses
 
-df_results = pd.DataFrame([wins, draws, losses], columns=["wins", "draws", "losses"])
-print(df_results)
+results_dict = {"Wins": wins, "Draws": draws, "Losses": losses}
+print(results_dict)
+
+results_df = pd.DataFrame(list(results_dict.values()), index=["Wins", "Draws", "Losses"])
+
+print(results_df)
+
+possible_outcomes = list(results_dict.keys())
+actual_outcomes = list(results_dict.values())
+
+plt.bar(range(len(results_df)), actual_outcomes, tick_label=possible_outcomes)
+plt.show()
+
+
+
+
 
 # x_axis = ['Wins', 'Draws', 'Losses']
 # y_axis = [ wins, draws, losses ]
