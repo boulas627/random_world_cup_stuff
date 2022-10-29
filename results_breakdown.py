@@ -70,6 +70,10 @@ possible_outcomes = list(results_dict.keys())
 actual_outcomes = list(results_dict.values())
 
 plt.bar(range(len(results_df)), actual_outcomes, tick_label=possible_outcomes)
+plt.title("FIFA World Cup Results")
+plt.xlabel("Results")
+plt.ylabel("# Of Games")
+
 plt.show()
 
 
