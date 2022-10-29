@@ -6,7 +6,7 @@ name: Manual workflow
 # or API.
 on:
   push: 
-    tags: "code commit"
+    branches: [ "**" ]
   workflow_dispatch:
     # Inputs the workflow accepts.
     inputs:
@@ -30,3 +30,9 @@ jobs:
     # Runs a single command using the runners shell
     - name: Send greeting
       run: echo "Hello ${{ github.event.inputs.name }}"
+    
+    - name: Testing Username
+      run: echo "${{ github.user.name }}" 
+    
+    - name: Test Echo
+      run: echo "Testing World Cup code"
