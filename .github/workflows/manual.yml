@@ -32,7 +32,7 @@ jobs:
       run: echo "Hello ${{ github.event.inputs.name }}"
     
     - name: Testing Username
-      run: echo "${{ github.user.name }}" 
+      run: echo "${{ input.username }}" 
     
     - name: Test Echo
       run: echo "Testing World Cup code"
