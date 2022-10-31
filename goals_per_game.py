@@ -9,6 +9,8 @@ df = pd.DataFrame(csv_data)
 
 print(df["goals_scored"])
 
+AWS_ACCESS_KEY = "SWEF4634667"
+
 goals_per_game = []
 
 for i in range(len(df)): 
