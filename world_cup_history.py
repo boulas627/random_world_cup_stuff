@@ -42,19 +42,16 @@ df = pd.read_csv("matches.csv")
 
 df = pd.DataFrame(df)
 
-# print(df.columns)
-
-# print(df.loc[200])
-
+user_country = input("Please input your countries name: ")
 
 print("World Cup Draws")
-print(world_cup_draws("United States", df))
+print(world_cup_draws(user_country, df))
 
 print("World Cup Losses")
-print(world_cup_losses("United States", df))
+print(world_cup_losses(user_country, df))
 
 print("World Cup Victories")
-print(world_cup_victories("United States", df))
+print(world_cup_victories(user_country, df))
 
 
 
